@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Baton Alpha</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="sidebar">
+        <h1>Channels +</h1>
+        <ul id="channels"></ul>
+      </div>
+      <div id="chat">
+        <nav id="navigation"><h2 id="current-channel"></h2></nav>
+        <div id="log"></div>
+        <div id="message-box">
+          <input type="text" id="message-text"></input>
+          <button id="send">send</button>
+        </div>
+      </div>
+      <div id="people" style="display: none;">
+      </div>
+    </div>
+    <script>
+      require('./app.js');
+    </script>
+  </body>
+</html>
