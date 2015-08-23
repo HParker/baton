@@ -1,19 +1,28 @@
-var irc = require("irc");
 var app = {};
-app.Message  = require("./src/models/message").message;
-app.Channel = require("./src/collections/channel").channel;
-app.Log     = require("./src/views/log").log;
+app.Message  = require("./src/models/message");
+app.Channel  = require("./src/models/channel");
+app.Messages = require("./src/collections/messages");
+app.Channels = require("./src/collections/channels");
 
-console.log(app);
+app.Log     = require("./src/views/log");
+app.Main     = require("./src/views/main");
 
-var mes = new app.Message({message: "hi", id: 1})
-console.log(mes)
+var irc = require("irc");
+var client = new irc.Client("0.0.0.0", "Adam", { channels: ['#hi'] });
 
-var chan = new app.Channel([mes]);
+var mes = new app.Message({message: "hi"})
 
-var log = new app.Log();
-log.render();
-console.log(chan);
+var messages = new app.Messages([mes]);
+
+var chan = new app.Channel({ name: "#hi", messages: messages, irc: client });
+
+var channels = new app.Channels([chan]);
+
+var main = new app.Main({ collection: channels });
+main.render();
+
+// var log = new app.Log({ collection: messages });
+// log.render();
 
 /*
   var log = document.getElementById("messages");

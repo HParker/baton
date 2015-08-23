@@ -31,6 +31,15 @@ nav h2 {
     margin: 0px;
 }
 
+#sidebar ul {
+    padding: 0px;
+}
+
+#sidebar li {
+    background-color: grey;
+    padding: 4px 0px 4px 20px;
+}
+
 #people {
     float: right;
     width: 120px;
@@ -43,4 +52,37 @@ nav h2 {
     width: calc(100% - 240px);
     height: 100%;
     background-color: #fff;
+}
+
+#log {
+    height: calc(100% - 93px);
+}
+
+#log ul {
+    margin: 0px;
+    font-size: 18px;
+}
+
+#current-channel {
+    margin: 0px
+}
+
+#message-box {
+    height: 50px;
+}
+
+input[type=text] {
+    padding:5px;
+    border:1px solid #ccc;
+    -webkit-border-radius: 10px;
+    height: 21px;
+    width: 94%;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding: 10px;
+    font-size: 18px;
+}
+
+input[type=text]:focus {
+    outline: none;
 }
