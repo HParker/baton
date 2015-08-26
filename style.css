@@ -31,12 +31,14 @@ nav h2 {
     margin: 0px;
 }
 
-#sidebar ul {
+ul {
     padding: 0px;
+    margin: 0px;
+    font-size: 18px;
+    list-style-type: none;
 }
 
-#sidebar li {
-    background-color: grey;
+li {
     padding: 4px 0px 4px 20px;
 }
 
@@ -56,11 +58,6 @@ nav h2 {
 
 #log {
     height: calc(100% - 93px);
-}
-
-#log ul {
-    margin: 0px;
-    font-size: 18px;
 }
 
 #current-channel {

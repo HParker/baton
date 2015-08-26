@@ -10,10 +10,7 @@ module.exports = Backbone.Model.extend({
 
   initialize: function(options) {
     this.irc = options.irc;
-    console.log("adding listener on message" + this.get("name"));
-    console.log(this.get("messages"));
     this.irc.addListener("message" + this.get("name"), _.bind(function(from, message) {
-      console.log(this.get("messages"));
       this.get("messages").add({ from: from, to: this.get("name"), message: message });
     }, this));
   }

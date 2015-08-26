@@ -2,8 +2,11 @@ describe("channels", function() {
   var Channels = require("../../src/collections/channels.js");
   var channels;
 
+  var irc = require("irc")
+  var client = new irc.Client("0.0.0.0", "Adam", { channels: ['#hi'] });
+
   beforeEach(function() {
-    channels = new Channels([{ name: "#ruby" }, { name: "#atom-shell" }])
+    channels = new Channels([{ name: "#ruby", irc: client }, { name: "#atom-shell", irc: client }])
   });
 
   it("is a collection of channels", function() {
