@@ -1,9 +1,8 @@
 # baton
-Cross Platform IRC client with electron
+Cross Platform IRC client with electron.
 
-Currently under active development.
+![screenshot](static/example-ui.png)
 
-You can pull it down and play with it if you like, but it is far from ready.
 
 ```
 brew install ngircd
