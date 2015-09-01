@@ -32,7 +32,7 @@ module.exports = function (grunt) {
           "test/helpers/**"
         ]
       }
-    }
+    },
   });
   grunt.loadNpmTasks('grunt-jasmine-nodejs');
   grunt.registerTask('default', 'jasmine_nodejs');

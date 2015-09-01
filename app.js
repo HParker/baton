@@ -1,28 +1,15 @@
-var app = {};
-app.Message  = require("./src/models/message");
-app.Channel  = require("./src/models/channel");
-app.Messages = require("./src/collections/messages");
-app.Channels = require("./src/collections/channels");
-
-app.Log     = require("./src/views/log");
-app.Main     = require("./src/views/main");
-
+var app = require("./src/application.js");
 var irc = require("irc");
-var client = new irc.Client("0.0.0.0", "Adam", { channels: ['#hi'] });
 
-var mes = new app.Message({message: "hi"})
+// todo: client will likely move down into channels when we support multiple hosts.
+var host = new app.Host({
+  host: "0.0.0.0",
+  user: "Adam",
+  channelNames: ["#hi", "#bye"]
+});
 
-var messages = new app.Messages([mes]);
-
-var chan = new app.Channel({ name: "#hi", messages: messages, irc: client });
-
-var channels = new app.Channels([chan]);
-
-var main = new app.Main({ collection: channels });
+var main = new app.Main({ model: host });
 main.render();
-
-// var log = new app.Log({ collection: messages });
-// log.render();
 
 /*
   var log = document.getElementById("messages");

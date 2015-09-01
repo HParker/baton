@@ -1,8 +1,7 @@
-describe("log", function() {
-  var Log = require("../../src/views/log.js");
+global.window = require("jsdom")
+  .jsdom()
+  .parentWindow;
+global.document = window.document;
 
-  it("renders message if no messages to display", function() {
-    var log = new Log();
-    //log.render();
-  });
+describe("log", function() {
 });

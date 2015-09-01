@@ -23,12 +23,21 @@ nav h2 {
     float: left;
     width: 240px;
     height: 100%;
-    background-color: #CFCFC4;
+    background-color: #32323E;
 }
 
 #sidebar h1 {
+    color: white;
     padding: 10px;
     margin: 0px;
+}
+
+#sidebar ul {
+    color: #8C8C9C;
+}
+
+#sidebar li.active {
+    color: white;
 }
 
 ul {
@@ -57,6 +66,8 @@ li {
 }
 
 #log {
+    overflow: scroll;
+
     height: calc(100% - 93px);
 }
 
@@ -68,7 +79,7 @@ li {
     height: 50px;
 }
 
-input[type=text] {
+input#message-text {
     padding:5px;
     border:1px solid #ccc;
     -webkit-border-radius: 10px;
