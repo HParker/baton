@@ -29,6 +29,7 @@
   "devDependencies": {
     "electron-prebuilt": "^0.31.1",
     "grunt": "^0.4.5",
-    "grunt-jasmine-nodejs": "^1.4.3"
+    "grunt-jasmine-nodejs": "^1.4.3",
+    "selenium-webdriver": "^2.46.1"
   }
 }

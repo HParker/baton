@@ -3,7 +3,7 @@ var _ = require("underscore");
 module.exports = Backbone.View.extend({
   el: "#log",
 
-  messageTemplate: _.template("<li><strong><%= from %></strong> <%= message %></li>"),
+  messageTemplate: _.template("<li><strong><%- from %></strong> <%- message %></li>"),
 
   logTemplate: _.template(
     "<ul><% messages.each(function(message) { %>" +

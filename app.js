@@ -3,9 +3,9 @@ var irc = require("irc");
 
 // todo: client will likely move down into channels when we support multiple hosts.
 var host = new app.Host({
-  host: "irc.freenode.net",
+  host: "thisisadam.me",
   user: "Adam",
-  channelNames: ["#ruby"]
+  channelNames: ["#hi"]
 });
 
 var main = new app.Main({ model: host });
